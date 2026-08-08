@@ -12,6 +12,7 @@ app.use(express.json());
 
 
 app.use('/posts', router)
-app.listen(1900, ()=> console.log('server is runing at 1900'))
+const PORT = process.env.PORT || 1900;
+app.listen(PORT, ()=> console.log('server is runing at ', PORT))
 
 
